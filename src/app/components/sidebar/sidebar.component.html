@@ -1,0 +1,69 @@
+<div class="sidebar_container" [ngClass]="{'active':'isActive'}">
+  
+  <div class="container_logo">
+    <div class="icon_content">
+      <button (click)="ocultarSideBar()">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="content_image">
+      <img src="../../../assets/images/Logo-Grupo-Viamatica.png" alt="Viamatica_Logo">
+    </div>
+  </div>
+
+  <mat-accordion class="content_item">
+    <mat-expansion-panel>    
+      <mat-expansion-panel-header class="meph">
+        <mat-panel-title class="mpt"> 
+          <mat-icon>security</mat-icon>
+           <button mat-button>Seguridad</button>
+        </mat-panel-title>
+      </mat-expansion-panel-header> 
+
+      <div class="buttons_content d-flex flex-column">
+        <button mat-button (click)="navigateToUsers()">Usuarios</button>
+        <button mat-button (click)="navigateToCreateProfile()">Crear Perfil</button>
+        <button mat-button>Asignar Perfil</button>
+        <button mat-button (click)="navigateToUnblockUser()">Desbloquear Usuario</button>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion class="content_item">
+    <mat-expansion-panel>    
+      <mat-expansion-panel-header class="meph">
+        <mat-panel-title class="mpt"> 
+          <mat-icon>fastfood</mat-icon>
+          <button mat-button>Pedidos</button>
+        </mat-panel-title>
+      </mat-expansion-panel-header>  
+      
+      <div class="buttons_content d-flex flex-column">
+        <button mat-button>Registrar Menu</button>
+        <button mat-button (click)="navigateToPedido()">Pedidos</button>
+        <button mat-button>Historial Pedidos</button>
+      </div> 
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="button_content d-flex flex-column align-items-start">
+    <button mat-button class="button">
+      <mat-icon ><i class="bi bi-file-earmark-bar-graph-fill"></i></mat-icon>
+      <a>Reporte</a>
+    </button>
+  </div> 
+  <div class="button_content d-flex flex-column align-items-start">
+    <button mat-button class="button">
+      <mat-icon >settings</mat-icon>
+      <a>Parametros</a>
+    </button>
+  </div> 
+  <div class="button_content d-flex flex-column align-items-start">
+    <button mat-button class="button" (click)="logout()">
+      <mat-icon >exit_to_app</mat-icon>
+      <a>Salir</a>
+    </button>
+  </div> 
+
+</div>

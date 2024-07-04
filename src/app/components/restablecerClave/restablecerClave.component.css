@@ -1,0 +1,100 @@
+.container_main_bg{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_main_body{
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+.container_image{
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+.container_image .image_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container_image .image_content img{
+    height: 100%;
+}
+.container_main_info{
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_info{
+    width: 80%;
+    height: 70%;
+}
+.content_info .container_header .header_title h1{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 600;
+    font-family: var(--letra_montserrat);
+}
+
+/*form*/
+.container_form{
+    width: 100%;
+    height: 40vh;
+    padding: 20px 0;
+} 
+.container_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container_form form input{
+    width: 80%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.container_form form button{
+    background-color: var(--bg_lila_100);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    color: var(--color_text_blanco);
+    margin-top: 30px;
+}
+
+@media screen and (max-width:792px) {
+    .container_main_info{
+        width: 90%;
+        height: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container_form form input{
+        width: 80%;
+        height: 50px;
+        margin-top: 7px;
+        padding-left: 10px;
+    }
+    .container_form form button{
+        background-color: var(--bg_lila_100);
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 50px;
+        color: var(--color_texto_blanco);
+    }
+}

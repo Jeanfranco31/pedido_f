@@ -1,0 +1,29 @@
+<div class="container_main_bg">
+  <div class="container_main_body">
+    <div class="container_image">
+      <div class="image_content">
+        <img src="../../../assets/images/Logo-Grupo-Viamatica.png" alt="Logo Viamatica">
+      </div>
+    </div>
+    <div class="container_main_info">
+      <div class="content_info">
+        <div class="container_header">
+          <div class="header_title">
+            <h1>Generar contraseña</h1>
+          </div>
+          <div class="header_content">
+            <p>Introduce el correo electronico vinculado con tu usuario donde recibiras las instrucciones para acceder a la cuenta</p>
+          </div>
+        </div>
+        <div class="container_form">
+          <form [formGroup]="form" (submit)="generarClave()">
+            <mat-form-field appearance="outline" id="form_field">
+              <input type="text" matInput  formControlName="email">
+            </mat-form-field>
+            <button mat-button>Generar Contraseña</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

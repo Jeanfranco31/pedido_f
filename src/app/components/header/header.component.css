@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+header{
+    width: 100vw;
+    height: 7vh;
+    box-shadow: 5px 2px 10px var(--bg_negro_100);
+    z-index: 2;
+    background-color: var(--bg_blanco_100);
+    position: relative;
+}
+
+.container_header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon_content{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: alias;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+.icon_content button{
+    width: 0;
+    height: 0;
+}
+.mat-h2, .mat-headline-6, .mat-typography .mat-h2, .mat-typography .mat-headline-6, .mat-typography h2 {
+    font-size: 20px;
+    font-weight: var(--fw-500);
+    line-height: 32px;
+    letter-spacing: .0125em;
+    margin: 0 0 16px;
+}
+
+.container_name,.letter_content{
+    margin-right: 15px;
+}
+.container_name{
+    width: 100%;
+    height: 5vh;
+}
+.container_name h2{
+    text-align: end;
+    font-family: var(--letra_montserrat);
+    font-size: 0.9rem;
+}
+
+.letter_content{
+    background-color: var(--bg_lila_100);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.letter_content p{
+    line-height: 30px;
+    color: var(--color_texto_blanco);
+    font-weight: var(--fw-700);
+    text-align: center;
+    font-family: var(--letra_montserrat);
+}
+
+@media screen and (max-width:792px) {
+    header{
+        width: 100%;
+        height: 7vh;
+        box-shadow: 5px 2px 6px var(--bg-negro_45);
+        font-family: var(--letra_montserrat);
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    .icon_content{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+    .icon_content i{
+        font-size: 1.6rem;
+        font-weight: var(--fw_bolder);
+    }
+    .icon_content button{
+        width: 0;
+        height: 0;    
+        border: 0;   
+    }
+}

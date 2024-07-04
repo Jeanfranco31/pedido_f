@@ -1,0 +1,45 @@
+<div class="main_container_body">
+  <div class="container_content">
+    <div class="container_title_form">
+      <div class="content_title_name">
+        <h1>Bienvenido</h1>
+      </div>
+    </div>
+    <div class="container_image_form">
+      <div class="content_image">
+        <img src="../../../../assets/images/Logo-Grupo-Viamatica.png" alt="">
+      </div>
+    </div>
+    <div class="container_form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="elements">
+          <div class="icon">
+            <mat-icon matPrefix>person</mat-icon>
+          </div>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Usuario</mat-label>
+            <input type="text" class="input" matInput autocomplete="off" formControlName="nombreUsuario">
+          </mat-form-field>
+        </div>
+        
+        <div class="elements">
+          <mat-icon class="icon" matPrefix>vpn_key</mat-icon>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Contraseña</mat-label>
+            <input id="input" [type]="hide ? 'password' : 'text'" matInput autocomplete="off" formControlName="clave" placeholder="Contraseña">
+          </mat-form-field>
+        </div>
+
+        <div class="pt-4 mb-4 mt-0 buttons_content w-100">
+          <button class="btn buttonLogin">
+              Iniciar Sesión 
+          </button>
+          <button class="btn buttonForgot" (click)="vistaRecuperarClave()">
+            ¿Olvido su contraseña? 
+        </button>
+        </div>  
+      </form>
+    </div>
+  </div>
+</div>

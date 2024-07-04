@@ -1,0 +1,25 @@
+<div class="container">
+  <form [formGroup]="roleForm" (ngSubmit)="onSave()">
+    <div class="dialog-container">
+      <div class="dialog-title">
+        <h1 class="title">Perfil</h1>
+      </div>
+      <div class="nombre">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Ingrese el nombre del perfil" formControlName="nombre" />
+        </mat-form-field>
+      </div>
+      <div class="checkbox-container">
+        <label class="label-Activo">Activo:</label>
+        <div class="checkbox-inner-container">
+          <mat-checkbox formControlName="estado"></mat-checkbox>
+        </div>
+      </div>
+      <div class="dialog-actions">
+        <button mat-fab extended class="button-container" type="submit">Guardar</button>
+        <button mat-fab extended class="button-container-cancelar" type="button" (click)="onCancel()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

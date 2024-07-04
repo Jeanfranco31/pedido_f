@@ -1,0 +1,81 @@
+<div class="container_main_background">
+  <div class="content_main_info">
+    <div class="content_header">
+      <h2>Registrar Usuario</h2>
+    </div>
+    <form [formGroup]="form">
+      <div class="personal_data">
+        <h3>Datos Personales</h3>
+
+        <div class="containers">
+          <div class="content">
+            <label>Identificación:</label>
+            <mat-form-field class="mff" appearance="outline">
+              <input type="text" maxlength="10" matInput formControlName="identificacion">
+            </mat-form-field>
+          </div>
+
+          <div class="content">
+            <label>Nombre Completo:</label>
+            <mat-form-field class="mff" appearance="outline">
+              <input type="text" maxlength="50" matInput formControlName="nombre">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="containers">
+          <div class="content_mail">
+            <label>Correo:</label>
+            <mat-form-field class="mff" appearance="outline">
+              <input type="text" maxlength="60" matInput formControlName="correo">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="containers">
+          <div class="content">
+            <label>Telefono:</label>
+            <mat-form-field class="mff" appearance="outline">
+              <input type="text" maxlength="10" matInput formControlName="telefono">
+            </mat-form-field>
+          </div>
+          <div class="content">
+            <label>Direccion:</label>
+            <mat-form-field class="mff" appearance="outline">
+              <input type="text" maxLength="70" matInput formControlName="direccion">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="container_selected_button">
+          <mat-label>Empresa:</mat-label>
+          <mat-select class="select" formControlName="opcionEmpresa">
+            <mat-option value="opt1">Viamatica</mat-option>
+            <mat-option value="opt2">Empresa 2</mat-option>
+          </mat-select>   
+        </div>
+      </div>
+
+      <div class="security">
+        <h3>Seguridad</h3>
+        <div class="containers_security">
+          <div class="container_selected_button_profile">
+            <label id="profile_label">Perfil:</label>
+              <mat-select class="select" formControlName="opcionSecurity">
+                <mat-option value="opt1">Viamatica</mat-option>
+                <mat-option value="opt2">Empresa 2</mat-option>
+              </mat-select>
+          </div>
+          <div class="active_profile">
+            <label>Activo:</label>
+            <mat-checkbox class="example-margin" [(ngModel)]="checked" formControlName="checked"></mat-checkbox>   
+          </div>
+        </div>
+      </div>
+      <div class="buttons_content">
+        <button mat-button class="buttons" id="save">Guardar</button>
+        <button mat-button class="buttons" id="cancel" (click)="closeView()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

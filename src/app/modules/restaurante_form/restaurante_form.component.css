@@ -1,0 +1,119 @@
+.main_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.form-container {
+    width: 70vw;
+    border-radius: 0.75rem;
+    background-color: var(--bg_azul_oscuro);
+    padding: 2rem;
+    color: var(--color_texto_blanco_mclaro);
+  }
+  .header_form_content{
+    display: flex;
+    flex-direction: row;
+  }
+  .header_form_content img{
+    width: auto;
+    height: 50px;
+  }
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 50px;
+    font-weight: var(--fw-700);
+    height: 50px;
+    width: 100%;
+  }
+  
+  .form {
+    margin-top: 1.5rem;
+  }
+  
+  .input-group {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    color:var(--color_texto_gris) ;
+    margin-bottom: 4px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: var(--borde_gris_oscuro);
+    outline: 0;
+    background-color: var(--bg_azul_oscuro);
+    padding: 0.75rem 1rem;
+    color: var(--color_texto_blanco_mclaro);
+  }
+  
+  #ruc{
+    width: 70%;
+    height: 40px;
+  }
+
+  .input-group input:focus {
+    border-color: rgba(167, 139, 250);
+    background-color: rgba(167, 139, 250);
+    transition: 500ms all ease-in-out inset;
+  }
+   
+  .sign {
+    display: block;
+    width: 100%;
+    background-color: var(--bg_lila_100);
+    padding: 0.75rem;
+    text-align: center;
+    color: var(--color_texto_azul_oscuro);
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+  }
+
+  .container_wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .loader_content{
+    background-color: var(--bg_negro_45);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  @media screen and (max-width:360px) {
+    .main_container{
+      width: 100vw;
+      height: auto;
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+    .container_wrapper{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-container {
+      width: 90%;
+    }
+  }
+  

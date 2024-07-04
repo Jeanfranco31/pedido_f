@@ -1,0 +1,63 @@
+.main_container_body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container_body .container_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content_title_name h1{
+    letter-spacing: 3px;
+    text-align: center;
+}
+.container_image_form{
+    margin-bottom: 25px;
+}
+.container_image_form .content_image img{
+    width: 150px;
+    height: auto;
+}
+.container_form .elements{
+    display:flex;
+    flex-direction: row;
+}
+.container_form .elements .input{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.icon{
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
+    width: 45px;
+    height: 55px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons_content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonLogin{
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
+    width: 200px;
+    font-size: 0.8rem;
+}
+.buttonForgot{
+    background-color: none;
+    font-size: 0.8rem;
+    color: var(--bg_lila_100);
+    margin-top: 10px;
+}

@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="titulo-busqueda center">
+    <div class="content-title">
+      <h1 class="title">Historial de Pedidos</h1>
+    </div>
+
+    <div class="container-filter-button row">
+      <div class="filter-container filter-container-date">
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha Desde</mat-label>
+          <input matInput [(ngModel)]="startDate" [matDatepicker]="startPicker" placeholder="Fecha Desde">
+          <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+          <mat-datepicker #startPicker></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha Hasta</mat-label>
+          <input matInput [(ngModel)]="endDate" [matDatepicker]="endPicker" placeholder="Fecha Hasta">
+          <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+          <mat-datepicker #endPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+  
+      <div class="button-container">
+        <button mat-fab extended color="primary" (click)="applyFilter()" class="example-button">Buscar<mat-icon>search</mat-icon></button>
+        <button mat-fab extended color="primary" (click)="exportToExcel()" class="example-button-excel">
+          Excel<img src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" style="height:32px;">
+        </button>
+    </div>
+    </div>
+  </div>
+
+ <div class="container-table">
+
+<div class="container-table-datasource">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" >
+    <ng-container matColumnDef="fechaPedido" sticky>
+      <th mat-header-cell *matHeaderCellDef > Fecha de pedido </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaPedido}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreUsuario" sticky>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreUsuario}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombrePedido">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Producto </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombrePedido}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="precioProducto">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+      <td mat-cell *matCellDef="let element"> {{element.precioProducto | currency}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef > Cantidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+ 
+</div>
+ </div>
+ <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
+
+</div>

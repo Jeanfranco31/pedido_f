@@ -1,0 +1,26 @@
+<div class="container_main_bg">
+  <div class="container_main_body">
+    <div class="container_image">
+      <div class="image_content">
+        <img src="../../../assets/images/Logo-Grupo-Viamatica.png" alt="Logo Viamatica">
+      </div>
+    </div>
+    <div class="container_main_info">
+      <div class="content_info">
+        <div class="container_header">
+          <div class="header_title">
+            <h1>Restablecer Contraseña</h1>
+          </div>
+        </div>
+        <div class="container_form">
+          <form [formGroup]="form" (submit)="generarClave()">
+            <input type="text" matInput placeholder="Contraseña actual / temporal">
+            <input type="text" matInput placeholder="Nueva Contraseña">
+            <input type="text" matInput placeholder=" Repetir contraseña">
+            <button mat-button>Cambiar Contraseña</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

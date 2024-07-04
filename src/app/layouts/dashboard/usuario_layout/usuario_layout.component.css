@@ -1,0 +1,250 @@
+.main_container_bg{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_info{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.container_header{
+    height: 10vh;
+    width: 100%;
+    position: relative;
+}
+.container_header_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 10%;
+}
+.container_header_title h1{
+    color: var(--bg_lila_100);
+    font-weight: var(--fw-700);
+}
+
+/*CONTENDOR BOTONES*/
+.container_buttons_actions{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container_buttons_subactions{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*CONTENEDOR INPUTS*/
+.container_input_buttons{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_input_buttons .content_id{
+    width: 45%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_input_buttons .content_id label{
+   color: var(--bg_negro_45);
+}
+
+.container_input_buttons .content_id input{
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--bg_negro_45);
+}
+
+/*SELECCION MULTIPLE*/
+.container_selected_button{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+mat-label{
+    width: 80%;
+    padding: 10px 0;
+    color: var(--bg_negro_45);
+}
+.select{
+    border: 1px solid var(--bg_negro_45);
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.container_selected_button .select{
+    border: 1px solid rgba(0, 0, 0, 0.396);
+    border-radius: 3px;
+}
+
+/*BOTONES*/
+.container_buttons{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons{
+    width: 40%;
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
+    font-weight: var(--fw-600);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons i{
+    font-size: 1.2rem;
+    font-weight: var(--fw-800);
+}
+
+/*TABLA*/
+.container_table{
+    background-color: var(--bg_blanco_100);
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    top: 20vh;
+    margin: 0 auto;
+}
+
+.loader_content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:792px) {
+    .main_container_bg{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top:4vh;
+        background-color: var(--bg_blanco_100);
+    }
+    .container_header .container_header_title{
+        height: 10vh;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 40px;
+    }
+    .container_buttons_actions form{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 3;
+    }
+    .container_input_buttons{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container_input_buttons .content_id{
+        width: 45%;
+        height: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container_buttons_subactions{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .container_selected_button{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container_selected_button .select{
+        border: 1px solid rgba(0, 0, 0, 0.396);
+        border-radius: 3px;
+    }
+
+    .container_buttons{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .mat-mdc-text-field-wrapper {
+        width: 100%;
+        height: 60px;
+    }
+    .container_table{
+        width: 100%;
+        height: 50vh;
+        border: 1px solid var(--bg_negro_33);
+        position: relative;
+        top: 20vh;
+        margin: 0 auto;
+        overflow-y: scroll;
+    }
+    .loader_content{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,36 @@
+.container_message{
+    width:100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.container_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_data .content_data_elements .content_check i{
+    font-size: 4rem;
+    padding: 15px 0;
+    color: rgba(40, 167, 69);
+    margin-bottom: 10px;
+}
+.content_data_elements{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_data_elements .content_info p{
+    padding: 10px 0;
+}
+
+.container_data .content_button .buttons{
+    background-color: rgb(127,103,190);
+    width: 100%;
+    color: #ffffff;
+
+}

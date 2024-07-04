@@ -1,0 +1,21 @@
+<div class="container_main_bg">
+  <div class="container_info">
+    <h2>Sitios Disponibles</h2>
+    <div class="container_cards">
+      <div class="card" *ngFor="let item of data">
+        <div class="card_image_content">
+          <img *ngIf="item.logotipo" [src]="'data:image/png;base64,'+item.logotipo">
+        </div>
+       <p>{{item.nombre}}</p>
+        <button mat-button class="buttons" id="search" (click)="verMenu()">
+          Ver menu
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="loader_content" *ngIf="load">
+  <app-loader ></app-loader>
+</div>

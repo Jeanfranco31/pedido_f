@@ -1,0 +1,49 @@
+
+.body_container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--letra_montserrat); 
+}
+.body_left_container{
+    width: 20vw;
+    height: 100vh;
+}
+.body_right_container{
+    width: 80vw;
+    height: 7vh;
+}
+
+.container_router_outlet{
+    width: 80vw;
+    height: 93vh;
+    z-index: 1;
+    background-color: var(--bg_blanco_100);
+    position: absolute;
+    right: 0;
+    top: 5%;
+}
+
+
+@media screen and (max-width:792px) {
+    .body_container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        font-family: var(--letra_montserrat); 
+    }
+    .body_left_container{
+        position: absolute;
+        background-color: var(--bg_azul_100);
+        width: 0px;
+        height: 100vh;
+    }
+    .container_router_outlet{
+        width: 100vw;
+        height: 93vh;
+        background-color: var(--bg_blanco_100);
+        z-index: 1;
+    }
+}
