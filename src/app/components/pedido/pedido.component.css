@@ -1,14 +1,12 @@
 .container_main_bg{
     width: 100%;
     height: 100%;
-    /*background-color: var(--bg_blanco_100);*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container_main_bg .container_info{
-    /*background-color: var(--bg_blanco_100);*/
     width: 90%;
     height: 90%;
     display: flex;
@@ -17,13 +15,13 @@
 }
 
 .container_cards{
-    width: 100%;
+    width: 90%;
     height: 90%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    overflow: scroll;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .container_info{
@@ -47,6 +45,7 @@
     align-items: center;
     overflow: hidden;
     box-shadow: 0 0 20px var(--bg_negro_33);
+    margin-bottom: 10px;
 }
 
 .card_image_content{
@@ -67,6 +66,7 @@
     font-weight: var(--fw_bolder);
     padding: 8px 0;
     text-transform: uppercase;
+    text-align: center;
     z-index: 2;
 }
 
@@ -75,6 +75,7 @@
     color: var(--color_texto_blanco);
     width: 70%;
     z-index: 2;
+    margin: 10px 0;
 }
 .loader_content{
     width: 100%;
@@ -99,17 +100,7 @@
         position: relative;
         z-index: 2;
     }
-    .card{
-        width: 80%;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        box-shadow: 0 0 5px var(--bg_negro_33);
-        margin-bottom: 15px;
-        margin: 10px auto;
-    }
+    
     .card img{
         width: auto;
         height: 100%;
@@ -134,10 +125,19 @@
         width: 100%;
         height: 90%;
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        overflow: scroll;
+        flex-direction: row;
+        justify-content: center;
+        overflow-y: scroll;
         position: relative;
+    }
+    .card{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px var(--bg_negro_33);
+        margin: 10px 0; 
     }
 
     .container_info{

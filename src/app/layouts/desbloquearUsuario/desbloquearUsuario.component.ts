@@ -68,12 +68,7 @@ export class DesbloquearUsuarioComponent implements OnInit {
 
   buscarUsuario(correo:string, correoInput: HTMLInputElement){
     this.correoIngresado = correo;
-
-    if (this.selectedOption.length > 0) {
-      this.dataSource.filter = `${correo} ${this.selectedOption}`;
-    } else {
-      this.dataSource.filter = correo;
-    }
+    this.dataSource.filter = correo;
     correoInput.value = Env_Mensajes.stringVacio;
   }
 

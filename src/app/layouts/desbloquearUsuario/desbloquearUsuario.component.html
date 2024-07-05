@@ -7,8 +7,9 @@
       <div class="container_main_actions">
         <div class="container_main_actions_left">
           <div class="container_name">
-            <p>Rol:</p>   
+            <p>Correo:</p>   
             <div class="container_form_button">      
+              <!--
               <mat-form-field appearance="outline" id="checkSelect">
                 <mat-label>Elija una opcion</mat-label>
                 <mat-select [ngModel]="selectedOption" (ngModelChange)="setSelection($event)"> 
@@ -16,6 +17,7 @@
                   <mat-option *ngFor="let data of datosTabla" [value]="data.nombreRol">{{data.nombreRol}}</mat-option>
                 </mat-select>
               </mat-form-field>
+              -->
               <mat-form-field appearance="outline" id="checkSelect">
                 <mat-label>Correo electronico:</mat-label>
                 <input type="text" matInput #correo>

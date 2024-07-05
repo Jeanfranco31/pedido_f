@@ -4,42 +4,42 @@
       <img src="../../../assets/images/Logo-Grupo-Viamatica.png" alt="">
       <p class="title">Registro Restaurante</p>
     </div>
-    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit(ruc,nombre,correo,telefono,direccion,logotipo,clave)">
       <div class="container_wrapper">
         <div class="input-group" id="ruc">
           <mat-label>RUC</mat-label>
-          <input matInput type="text" formControlName="ruc" [maxlength]="13">
+          <input matInput type="text" formControlName="ruc" [maxlength]="13" #ruc>
         </div>
         
         <div class="input-group" id="nombre">
           <mat-label>Nombre</mat-label>
-          <input matInput type="text" formControlName="nombre" [maxlength]="100">
+          <input matInput type="text" formControlName="nombre" [maxlength]="100" #nombre>
         </div>
       </div>
 
       <div class="input-group" id="correo">
         <mat-label>Correo</mat-label>
-        <input matInput type="text" formControlName="correo" [maxLength]="100">
+        <input matInput type="text" formControlName="correo" [maxLength]="100" #correo>
       </div>
 
       <div class="input-group" id="telefono">
         <mat-label>Telefono</mat-label>
-        <input matInput type="text" formControlName="telefono" [maxlength]="10">
+        <input matInput type="text" formControlName="telefono" [maxlength]="10" #telefono>
       </div>
       
       <div class="input-group" id="direccion">
         <mat-label>Direccion</mat-label>
-        <input matInput type="text" formControlName="direccion" [maxlength]="100">
+        <input matInput type="text" formControlName="direccion" [maxlength]="100" #direccion>
       </div>
 
       <div class="container_wrapper">
         <div class="input-group">
           <mat-label>Imagen</mat-label>
-          <input type="file" id="image" (change)="onFileSelected($event)" formControlName="logotipo">
+          <input type="file" id="image" (change)="onFileSelected($event)" formControlName="logotipo" #logotipo>
         </div>
         <div class="input-group">
           <mat-label>Contraseña</mat-label>
-          <input type="password" id="password" matInput formControlName="contrasena" [maxlength]="30">
+          <input type="password" id="password" matInput formControlName="contrasena" [maxlength]="30" #clave>
         </div>
       </div>
       <button class="sign">Registrarse</button>
